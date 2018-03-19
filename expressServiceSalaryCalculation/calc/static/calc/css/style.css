@@ -1,0 +1,19 @@
+body{
+    padding: 80px;
+}
+
+.days-input{
+    width: 50% !important;
+}
+
+.action-li{
+    cursor: pointer;
+}
+
+.action-li:hover{
+    color: #58ACFA;
+}
+
+#calc-btn{
+    margin-top: 15px;
+}

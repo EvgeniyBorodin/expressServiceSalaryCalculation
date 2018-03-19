@@ -1,0 +1,28 @@
+{% extends 'calc/_layout.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <h2>Расчёт зарплаты</h2>
+    <div class="employees">
+        <table class="table table-stripped">
+            <tr>
+                <th>Сотрудник</th>
+                <th>Должность</th>
+                <th>Кол-во рабочих дней</th>
+                <th>Кол-во больничных дней</th>
+                <th>Кол-во отпускных дней</th>
+            </tr>
+            {% for emp in employees %}
+                <tr>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.position}}</td>
+                    <td><input class="form-control days-input" type="number" min="0" value="10"/></td>
+                    <td><input class="form-control days-input" type="number" min="0" value="10"/></td>
+                    <td><input class="form-control days-input" type="number" min="0" value="10"/></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button id="calc-btn" class="btn btn-success btn-lg">Выполнить расчёт</button>
+    </div>
+{% endblock %}
